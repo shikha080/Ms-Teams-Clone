@@ -51,13 +51,13 @@
   --btns-hover-scale: scale(1.1);
 
   /* neon theme default */
-  --body-bg: black;
+  --body-bg: #efb5a3;
   --msger-bg: black;
   --msger-private-bg: black;
   --left-msg-bg: #da05f3;
   --private-msg-bg: #f77070;
   --right-msg-bg: #579ffb;
-  --box-shadow: 3px 3px 6px #0500ff, -3px -3px 6px #da05f3;
+  --box-shadow: 3px 3px 6px #efb5a3, -3px -3px 6px #05f3d3;
   --btn-bg: white;
   --btn-color: black;
   --btn-opc: 1;
@@ -66,73 +66,7 @@
   --wb-hbg: #000000;
   --my-settings-label-color: limegreen;
 
-  /* dark theme
-  --body-bg: #16171b;
-  --msger-bg: #16171b;
-  --msger-private-bg: black;
-  --left-msg-bg: #222328;
-  --private-msg-bg: #f77070;
-  --right-msg-bg: #0a0b0c;
-  --box-shadow: 3px 3px 6px #0a0b0c, -3px -3px 6px #222328; 
-  --btn-bg: white;
-  --btn-color: black;
-  --btn-opc: 1;
-  --btns-left: 20px;
-  --wb-bg: #000000;
-  --wb-hbg: #000000;
-  --my-settings-label-color: limegreen;
-  */
-
-  /* forest theme
-  --body-bg: black;
-  --msger-bg: black;
-  --msger-private-bg: black;
-  --left-msg-bg: #2e3500;
-  --private-msg-bg: #f77070;
-  --right-msg-bg: #004b1c;
-  --box-shadow: 3px 3px 6px #27944f, -3px -3px 6px #14843d;
-  --btn-bg: white;
-  --btn-color: black;
-  --btn-opc: 1;
-  --btns-left: 20px;
-  --wb-bg: #000000;
-  --wb-hbg: #000000;
-  --my-settings-label-color: limegreen;
-  */
-
-  /* sky theme
-  --body-bg: black;
-  --msger-bg: black;
-  --msger-private-bg: black;
-  --left-msg-bg: #0c95b7;
-  --private-msg-bg: #f77070;
-  --right-msg-bg: #012a5f;
-  --box-shadow: 3px 3px 6px #03a5ce, -3px -3px 6px #03a5ce;
-  --btn-bg: white;
-  --btn-color: black;
-  --btn-opc: 1;
-  --btns-left: 20px;
-  --wb-bg: #000000;
-  --wb-hbg: #000000;
-  --my-settings-label-color: #03a5ce;
-  */
-
-  /* ghost theme
-  --body-bg: #16171b;
-  --msger-bg: transparent;
-  --msger-private-bg: black;
-  --left-msg-bg: rgba(0, 0, 0, 0.7);
-  --private-msg-bg: rgba(252, 110, 110, 0.7);
-  --right-msg-bg: rgba(0, 0, 0, 0.7);
-  --box-shadow: "0px"; 
-  --btn-bg: transparent;
-  --btn-color: white;
-  --btn-opc: 0.7;
-  --btns-left: 20px;
-  --wb-bg: transparent;
-  --wb-hbg: #000000;
-  --my-settings-label-color: limegreen;
-  */
+ 
 
   /* https://developer.mozilla.org/it/docs/Web/CSS/object-fit */
   --video-object-fit: cover;

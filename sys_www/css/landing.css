@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #72ecc3;
+  background-color: #F4B41A;
 
 }
 
@@ -295,7 +295,7 @@ html {
 }
 
 body {
-  background: #7aeed1;
+  background: #71f3e8;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -304,7 +304,7 @@ hr {
   border: 0;
   display: block;
   height: 1px;
-  background: #dd93ec;
+  background: #2c222e;
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -422,7 +422,7 @@ html {
 }
 
 body {
-  color: #ee1180;
+  color: #097770;
   font-size: 1rem;
 }
 
@@ -450,7 +450,7 @@ h6,
   font-family: "Fira Sans", sans-serif;
   font-weight: 600;
   clear: both;
-  color: #433f42;
+  color: #ed3572;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -605,7 +605,7 @@ blockquote p {
 address {
   border-width: 1px 0;
   border-style: solid;
-  border-color: #ee5db1;
+  border-color: #747273;
   padding: 24px 0;
   margin: 0 0 24px;
 }
@@ -631,7 +631,7 @@ code,
 kbd,
 tt,
 var {
-  background: #5ad6b7;
+  background: #F4B41A;
 }
 
 pre {
@@ -672,7 +672,7 @@ strong {
 }
 
 .invert-color {
-  color: #21273d;
+  color: #323335;
 }
 
 .invert-color a:not(.button):hover,
@@ -703,7 +703,7 @@ strong {
 .invert-color .h4,
 .invert-color .h5,
 .invert-color .h6 {
-  color: #0e7873;
+  color: #033836;
 }
 
 .invert-color address {
@@ -1065,7 +1065,7 @@ fieldset {
   padding: 11px 15px;
   height: 48px;
   border-radius: 0;
-  color: #95438e;
+  color: #f395eb;
   box-shadow: none;
   max-width: 100%;
   width: 100%;
@@ -1669,7 +1669,7 @@ textarea.form-input {
   display: block;
   position: absolute;
   top: 50%;
-  left: 50%;
+   left: 50%;
   margin-top: -1px;
   margin-left: -8px;
   width: 16px;
@@ -2836,8 +2836,8 @@ ul.pricing-item-features-list li.is-checked::after {
 .cta-inner {
   padding-left: 16px;
   padding-right: 16px;
-  background-color: #376df9;
-  background: linear-gradient(100deg, #376df9 0, #ff5fa0 75%, #ffc55a 100%);
+  background-color:   #f57e7e;
+  background: linear-gradient(100deg,   #f57e7e, 0, #efb5a3 75%, #ff9a8d 100%);
 }
 
 @media (min-width: 641px) {

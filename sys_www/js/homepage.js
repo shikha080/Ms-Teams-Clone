@@ -41,7 +41,7 @@ let callStartTime;
 let callElapsedTime;
 let recStartTime;
 let recElapsedTime;
-let Theme = "neon"; // neon - dark - forest - ghost ...
+let Theme = "neon"; // neon - dark - peach - ghost ...
 let swalBackground = "rgba(0, 0, 0, 0.7)"; // black - #16171b - transparent ...
 let signalingServerPort = 3000; // must be same of server PORT
 let signalingServer = getServerUrl();
@@ -943,7 +943,7 @@ function handleRemovePeer(config) {
 }
 
 /**
- * Set theme neon - dark - forest - sky - ghost
+ * Set theme neon - dark - peach - sky - ghost
  * @param {*} theme
  */
 function setTheme(theme) {
@@ -954,7 +954,7 @@ function setTheme(theme) {
     case "neon":
       // neon theme
       swalBackground = "rgba(0, 0, 0, 0.7)";
-      document.documentElement.style.setProperty("--body-bg", "black");
+      document.documentElement.style.setProperty("--body-bg", "#efb5a3");
       document.documentElement.style.setProperty("--msger-bg", "black");
       document.documentElement.style.setProperty("--msger-private-bg", "black");
       document.documentElement.style.setProperty("--left-msg-bg", "#da05f3");
@@ -1002,8 +1002,8 @@ function setTheme(theme) {
         "3px 3px 6px #0a0b0c, -3px -3px 6px #222328"
       );
       break;
-    case "forest":
-      // forest theme
+    case "peach":
+      // peach theme
       swalBackground = "rgba(0, 0, 0, 0.7)";
       document.documentElement.style.setProperty("--body-bg", "black");
       document.documentElement.style.setProperty("--msger-bg", "black");
@@ -1023,7 +1023,7 @@ function setTheme(theme) {
       );
       document.documentElement.style.setProperty(
         "--box-shadow",
-        "3px 3px 6px #27944f, -3px -3px 6px #14843d"
+        "3px 3px 6px #f57e7e, -3px -3px 6px #315f72"
       );
       break;
     case "sky":
