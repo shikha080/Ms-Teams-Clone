@@ -1,12 +1,15 @@
+
+//these are the some adjectives and noun 
+
 let adjectives = [
-    "small",
+    "sm",
     "big",
     "large",
-    "smelly",
+    "sme",
     "new",
     "happy",
     "shiny",
-    "old",
+    "ol",
     "clean",
     "nice",
     "bad",
@@ -113,8 +116,8 @@ let adjectives = [
     "gorilla",
     "lizard",
     "parrot",
-    "sloth",
-    "swan",
+    "slth",
+    "swa",
   ];
   
   function getRandomNumber(length) {
@@ -134,7 +137,7 @@ let adjectives = [
   adjective = adjective.charAt(0).toUpperCase() + adjective.substring(1);
   document.getElementById("roomName").value = "";
   
-  // Typing Effect
+  // Typing Effect for the unique id
   
   let i = 0;
   let txt = num + adjective + noun;

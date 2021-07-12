@@ -1,5 +1,3 @@
-
-
 "use strict"; // https://www.w3schools.com/js/js_strict.asp
 
 require("dotenv").config();
@@ -32,7 +30,7 @@ let turnUsername = process.env.TURN_USERNAME;
 let turnCredential = process.env.TURN_PASSWORD;
 
 
-app.use(express.static(path.join(__dirname, "sys_www")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Api parse body data as json
 app.use(express.json());
@@ -59,22 +57,22 @@ app.use((err, req, res, next) => {
 
 // all start from here
 app.get(["/"], (req, res) => {
-  res.sendFile(path.join(__dirname, "sys_www/landing.html"));
+  res.sendFile(path.join(__dirname, "public/landing.html"));
 });
 
 // set new room name and join
 app.get(["/newcall"], (req, res) => {
-  res.sendFile(path.join(__dirname, "sys_www/newcall.html"));
+  res.sendFile(path.join(__dirname, "public/newcall.html"));
 });
 
 // if not allow video/audio
 app.get(["/permission"], (req, res) => {
-  res.sendFile(path.join(__dirname, "sys_www/permission.html"));
+  res.sendFile(path.join(__dirname, "public/permission.html"));
 });
 
 // privacy policy
 app.get(["/privacy"], (req, res) => {
-  res.sendFile(path.join(__dirname, "sys_www/privacy.html"));
+  res.sendFile(path.join(__dirname, "public/privacy.html"));
 });
 
 // no room name specified to join
@@ -88,7 +86,7 @@ app.get("/join/*", (req, res) => {
     logme("redirect:" + req.url + " to " + url.parse(req.url).pathname);
     res.redirect(url.parse(req.url).pathname);
   } else {
-    res.sendFile(path.join(__dirname, "sys_www/homepage.html"));
+    res.sendFile(path.join(__dirname, "public/homepage.html"));
   }
 });
 
@@ -168,12 +166,7 @@ async function ngrokStart() {
 server.listen(PORT, null, () => {
   logme(
     `%c
-	███████╗██╗ ██████╗ ███╗   ██╗      ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
-	██╔════╝██║██╔════╝ ████╗  ██║      ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
-	███████╗██║██║  ███╗██╔██╗ ██║█████╗███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝
-	╚════██║██║██║   ██║██║╚██╗██║╚════╝╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗
-	███████║██║╚██████╔╝██║ ╚████║      ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║
-	╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝      ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝ started...
+	Server started...
 	`,
     "font-family:monospace"
   );

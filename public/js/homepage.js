@@ -1,5 +1,3 @@
-
-
 "use strict"; // https://www.w3schools.com/js/js_strict.asp
 
 const welcomeImg = "../images/illustration-section-01.svg";
@@ -41,7 +39,7 @@ let callStartTime;
 let callElapsedTime;
 let recStartTime;
 let recElapsedTime;
-let Theme = "neon"; // neon - dark - peach - ghost ...
+let Theme = "neon";//default theme
 let swalBackground = "rgba(0, 0, 0, 0.7)"; // black - #16171b - transparent ...
 let signalingServerPort = 3000; // must be same of server PORT
 let signalingServer = getServerUrl();
@@ -286,7 +284,7 @@ function getHtmlElementsById() {
 }
 
 /**
- * Using tippy aka very nice tooltip!
+ * Using this
  * https://atomiks.github.io/tippyjs/
  */
 function setButtonsTitle() {
@@ -954,9 +952,9 @@ function setTheme(theme) {
     case "neon":
       // neon theme
       swalBackground = "rgba(0, 0, 0, 0.7)";
-      document.documentElement.style.setProperty("--body-bg", "#efb5a3");
-      document.documentElement.style.setProperty("--msger-bg", "black");
-      document.documentElement.style.setProperty("--msger-private-bg", "black");
+      document.documentElement.style.setProperty("--body-bg", "#f6c0b0");
+      document.documentElement.style.setProperty("--msger-bg", "rgb(250, 250, 250)");
+      document.documentElement.style.setProperty("--msger-private-bg", "rgb(234, 226, 230)");
       document.documentElement.style.setProperty("--left-msg-bg", "#da05f3");
       document.documentElement.style.setProperty("--private-msg-bg", "#f77070");
       document.documentElement.style.setProperty("--right-msg-bg", "#579ffb");
@@ -972,7 +970,8 @@ function setTheme(theme) {
       );
       document.documentElement.style.setProperty(
         "--box-shadow",
-        "3px 3px 6px #0500ff, -3px -3px 6px #da05f3"
+        "3px 3px 6px #f35b7c, -3px -3px 6px #7261f5"
+      
       );
       break;
     case "dark":
@@ -1005,16 +1004,16 @@ function setTheme(theme) {
     case "peach":
       // peach theme
       swalBackground = "rgba(0, 0, 0, 0.7)";
-      document.documentElement.style.setProperty("--body-bg", "black");
-      document.documentElement.style.setProperty("--msger-bg", "black");
-      document.documentElement.style.setProperty("--msger-private-bg", "black");
+      document.documentElement.style.setProperty("--body-bg", "#FFA781");
+      document.documentElement.style.setProperty("--msger-bg", "#FFA781");
+      document.documentElement.style.setProperty("--msger-private-bg", "#FFA781");
       document.documentElement.style.setProperty("--left-msg-bg", "#2e3500");
       document.documentElement.style.setProperty("--private-msg-bg", "#f77070");
       document.documentElement.style.setProperty("--right-msg-bg", "#004b1c");
       document.documentElement.style.setProperty("--wb-bg", "#000000");
       document.documentElement.style.setProperty("--wb-hbg", "#000000");
       document.documentElement.style.setProperty("--btn-bg", "white");
-      document.documentElement.style.setProperty("--btn-color", "black");
+      document.documentElement.style.setProperty("--btn-color", "#5B0E2D");
       document.documentElement.style.setProperty("--btn-opc", "1");
       document.documentElement.style.setProperty("--btns-left", "20px");
       document.documentElement.style.setProperty(
@@ -1023,7 +1022,7 @@ function setTheme(theme) {
       );
       document.documentElement.style.setProperty(
         "--box-shadow",
-        "3px 3px 6px #f57e7e, -3px -3px 6px #315f72"
+        "3px 3px 6px #FFA781, -3px -3px 6px #5B0E2D"
       );
       break;
     case "sky":
