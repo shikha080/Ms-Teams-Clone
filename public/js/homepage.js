@@ -41,7 +41,7 @@ let recStartTime;
 let recElapsedTime;
 let Theme = "neon";//default theme
 let swalBackground = "rgba(0, 0, 0, 0.7)"; // black - #16171b - transparent ...
-let signalingServerPort = 3000; // must be same of server PORT
+let signalingServerPort = 5000; // must be same of server PORT
 let signalingServer = getServerUrl();
 let roomId = getRoomId();
 let peerInfo = getPeerInfo();
@@ -421,7 +421,7 @@ function setButtonsTitle() {
 }
 
 /**
- * Get peer info using DetecRTC
+ * Get peer info using DetecRTC by this following link
  * https://github.com/muaz-khan/DetectRTC
  * @return Json peer info
  */
@@ -551,7 +551,7 @@ function handleConnect() {
 }
 
 /**
- * set your name for the conference
+ * set your name for the  video conference
  */
 function whoAreYou() {
   playSound("newMessage");
@@ -623,7 +623,7 @@ function joinToChannel() {
 }
 
 /**
- * welcome message
+ * welcome screen message
  */
 function welcomeUser() {
   const myRoomUrl = window.location.href;
@@ -669,7 +669,7 @@ function welcomeUser() {
  * @param {*} config
  */
 function handleAddPeer(config) {
-  // console.log("addPeer", JSON.stringify(config));
+  
   let peer_id = config.peer_id;
   let peers = config.peers;
 
@@ -746,6 +746,7 @@ function handleAddTracks(peer_id) {
 }
 
 /**
+ * these are some  RTC data channel
  * Secure RTC Data Channel
  * https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel
  * https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createDataChannel
@@ -814,11 +815,8 @@ function handleRtcOffer(peer_id) {
 }
 
 /**
- * Peers exchange session descriptions which contains information
- * about their audio / video settings and that sort of stuff. First
- * the 'offerer' sends a description to the 'answerer' (with type "offer"),
- * then the answerer sends one back (with type "answer").
- *
+
+ * remote session description
  * @param {*} config
  */
 function handleSessionDescription(config) {
@@ -887,7 +885,7 @@ function handleIceCandidate(config) {
 
 /**
  * Disconnected from Signaling Server
- * Tear down all of our peer connections
+ * Tear down all of website peer connections
  * and remove all the media divs when we disconnect from signaling server
  */
 function handleDisconnect() {
@@ -907,13 +905,7 @@ function handleDisconnect() {
 }
 
 /**
- * When a user leaves a channel (or is disconnected from the
- * signaling server) everyone will recieve a 'removePeer' message
- * telling them to trash the media channels they have open for those
- * that peer. If it was this client that left a channel, they'll also
- * receive the removePeers. If this client was disconnected, they
- * wont receive removePeers, but rather the signaling_socket.on('disconnect')
- * code will kick in and tear down all the peer sessions.
+
  *
  * @param {*} config
  */
@@ -1126,7 +1118,7 @@ function setupLocalMedia(callback, errorback) {
       // https://blog.addpipe.com/common-getusermedia-errors/
       console.error("Access denied for audio/video", err);
       playSound("error");
-      window.location.href = `/permission?roomId=${roomId}&getUserMediaError=${err.toString()}`;
+      window.location.href = `/givepermission?roomId=${roomId}&getUserMediaError=${err.toString()}`;
       if (errorback) errorback();
     });
 } // end [setup_local_stream]
@@ -4216,7 +4208,7 @@ function kickedOut(config) {
       popup: "animate__animated animate__fadeOutUp",
     },
   }).then(() => {
-    window.location.href = "/newcall";
+    window.location.href = "/makenewcall";
   });
 }
 
@@ -4277,7 +4269,7 @@ function leaveRoom() {
     },
   }).then((result) => {
     if (result.isConfirmed) {
-      window.location.href = "/newcall";
+      window.location.href = "/makenewcall";
     }
   });
 }

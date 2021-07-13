@@ -16,7 +16,7 @@ const io = new Server().listen(server);
 const ngrok = require("ngrok");
 
 
-let PORT = process.env.PORT || 3000; // signalingServerPort
+let PORT = process.env.PORT || 5000; // signalingServerPort or your local server port
 let localHost = "http://localhost:" + PORT; // http
 let channels = {}; // collect channels
 let sockets = {}; // collect sockets
@@ -57,22 +57,22 @@ app.use((err, req, res, next) => {
 
 // all start from here
 app.get(["/"], (req, res) => {
-  res.sendFile(path.join(__dirname, "public/landing.html"));
+  res.sendFile(path.join(__dirname, "public/next.html"));
 });
 
 // set new room name and join
-app.get(["/newcall"], (req, res) => {
-  res.sendFile(path.join(__dirname, "public/newcall.html"));
+app.get(["/makenewcall"], (req, res) => {
+  res.sendFile(path.join(__dirname, "public/makenewcall.html"));
 });
 
 // if not allow video/audio
-app.get(["/permission"], (req, res) => {
-  res.sendFile(path.join(__dirname, "public/permission.html"));
+app.get(["/givepermission"], (req, res) => {
+  res.sendFile(path.join(__dirname, "public/givepermission.html"));
 });
 
 // privacy policy
-app.get(["/privacy"], (req, res) => {
-  res.sendFile(path.join(__dirname, "public/privacy.html"));
+app.get(["/privacypolicy"], (req, res) => {
+  res.sendFile(path.join(__dirname, "public/privacypolicy.html"));
 });
 
 // no room name specified to join

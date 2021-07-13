@@ -1,24 +1,24 @@
 
 //these are the some adjectives and noun 
 
-let adjectives = [
+let ids1 = [
     "sm",
-    "big",
-    "large",
+    "b",
+    "le",
     "sme",
     "new",
-    "happy",
-    "shiny",
+    "hy",
+    "shy",
     "ol",
-    "clean",
-    "nice",
+    "cl",
+    "ni",
     "bad",
     "cool",
     "hot",
     "cold",
-    "warm",
-    "hungry",
-    "slow",
+    "rm",
+    "gry",
+    "low",
     "fast",
     "red",
     "white",
@@ -35,27 +35,27 @@ let adjectives = [
     "lucky",
     "weak",
     "tall",
-    "short",
+    "t",
     "tiny",
     "great",
     "long",
-    "single",
-    "rich",
-    "young",
-    "dirty",
-    "fresh",
-    "brown",
+    "gule",
+    "ch",
+    "yog",
+    "dirt",
+    "resh",
+    "byo",
     "dark",
-    "crazy",
-    "sad",
+    "zy",
+    "ad",
     "loud",
     "brave",
     "calm",
     "silly",
-    "smart",
+    "s",
   ];
   
-  let nouns = [
+  let mals = [
     "dog",
     "bat",
     "wrench",
@@ -130,8 +130,8 @@ let adjectives = [
     return result;
   }
   
-  let adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
-  let noun = nouns[Math.floor(Math.random() * nouns.length)];
+  let adjective = ids1[Math.floor(Math.random() * ids1.length)];
+  let noun = mals[Math.floor(Math.random() * mals.length)];
   let num = getRandomNumber(5);
   noun = noun.charAt(0).toUpperCase() + noun.substring(1);
   adjective = adjective.charAt(0).toUpperCase() + adjective.substring(1);
