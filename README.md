@@ -10,7 +10,7 @@ https://agile-nexus.herokuapp.com/
 I have named this website Agile Nexus because i tried to follow the Agile Model through this project. As WebRTC provides real time communication and the api's are very easy to use hence i have used WebRTC with google turn serve and numb stun server for this project.
 
 
-This Website Ui is very user friendly anyone can visit my website and access it without facing any difficulties some functionalities and features are mentioned on the first page only. 
+This Website UI is very user friendly anyone can visit my website and access it without facing any difficulties some functionalities and features are mentioned on the first page only. 
 
 I have added some notifications sounds as well to give user a better experience.
 
