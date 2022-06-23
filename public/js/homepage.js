@@ -1526,7 +1526,7 @@ function handleVideoPlayerFs(videoId, videoFullScreenBtnId) {
       }
       isVideoOnFullScreen = false;
       videoPlayer.style.pointerEvents = "auto";
-      // console.log("Esc FS isVideoOnFullScreen", isVideoOnFullScreen);
+      
     }
   }
 }
